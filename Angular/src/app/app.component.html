@@ -1,3 +1,18 @@
-<div class="default-style">
-  <dx-button [text]="buttonText" (onClick)="onClick($event)"></dx-button>
-</div>
+<dx-pivot-grid
+    id="pivot-grid"
+    [dataSource]="dataSource"
+    [allowSorting]="true"
+    [allowSortingBySummary]="true"
+    [allowFiltering]="true"
+    (onExporting)="onExporting($event)">
+    <dxo-field-panel
+        [visible]="true"
+        [showFilterFields]="false">
+    </dxo-field-panel>
+    <!-- <dxo-field-chooser
+        [enabled]="true">
+    </dxo-field-chooser> -->
+    <dxo-export
+        [enabled]="true">
+    </dxo-export>
+</dx-pivot-grid>

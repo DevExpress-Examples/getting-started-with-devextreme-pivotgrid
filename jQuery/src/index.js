@@ -50,9 +50,9 @@ $(function () {
             showFilterFields: false
         },
         // Configure the Field Chooser
-        fieldChooser: {
-            // enabled: true
-        },
+        // fieldChooser: {
+        //     enabled: true
+        // },
         // Export to Excel
         export: {
             enabled: true
