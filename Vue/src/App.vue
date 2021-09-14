@@ -1,28 +1,69 @@
 <template>
-  <Home/>
+    <DxPivotGrid
+        id="pivot-grid"
+        :data-source="dataSource"
+        :allow-sorting="true"
+        :allow-sorting-by-summary="true"
+        :allow-filtering="true"
+        @exporting="onExporting">
+        <DxFieldPanel
+            :visible="true"
+            :show-filter-fields="false"
+        />
+        <!-- <DxFieldChooser :enabled="true" /> -->
+        <DxExport :enabled="true" />
+    </DxPivotGrid>
 </template>
 
 <script>
-
 import 'devextreme/dist/css/dx.common.css';
-import 'devextreme/dist/css/dx.material.blue.light.compact.css'
-import Home from './components/Home.vue'
+import 'devextreme/dist/css/dx.light.css'
+
+import {
+    DxPivotGrid,
+    DxFieldPanel,
+    // DxFieldChooser,
+    DxExport
+} from 'devextreme-vue/pivot-grid';
+import AdventureWorksService from './adventureworks.service';
+import { exportPivotGrid } from 'devextreme/excel_exporter';
+import { Workbook } from 'exceljs';
+import saveAs from 'file-saver';
 
 export default {
-  name: 'App',
+  name: 'Getting Started with DevExtreme PivotGrid',
   components: {
-    Home
+    DxPivotGrid,
+    DxFieldPanel,
+    // DxFieldChooser,
+    DxExport
+  },
+  data() {
+      return {
+          dataSource: AdventureWorksService.getPivotGridDataSource()
+      }
+  },
+  methods: {
+      onExporting (e) {
+        const workbook = new Workbook();
+        const worksheet = workbook.addWorksheet('Sales');
+        
+        exportPivotGrid({
+            component: e.component,
+            worksheet: worksheet
+        }).then(function() {
+            workbook.xlsx.writeBuffer().then(function(buffer) {
+                saveAs(new Blob([buffer], { type: 'application/octet-stream' }), 'Sales.xlsx');
+            });
+        });
+        e.cancel = true;
+      }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin: 50px 50px;
-  width: 90vh;
+#pivot-grid {
+    height: 70vh;
 }
 </style>
