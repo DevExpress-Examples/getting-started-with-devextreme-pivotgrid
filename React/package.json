@@ -8,8 +8,10 @@
     "@testing-library/user-event": "^12.1.10",
     "devextreme": "^20.2.5",
     "devextreme-react": "^20.2.5",
-    "react-dom": "^16.14.0",
+    "exceljs": "^4.3.0",
+    "file-saver": "^2.0.5",
     "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.0.1"
   },
