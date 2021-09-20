@@ -33,7 +33,7 @@ const onExporting = (e) => {
 function App() {
   return (
       <PivotGrid
-        id="pivot-grid"
+        id="pivotGrid"
         dataSource={dataSource}
         allowSorting={true}
         allowSortingBySummary={true}
@@ -43,9 +43,11 @@ function App() {
             visible={true}
             showFilterFields={false}
         />
-        {/* <FieldChooser
+        {/* 
+        <FieldChooser
             enabled={true}
-        /> */}
+        />
+        */}
         <Export enabled={true} />
       </PivotGrid>
   );

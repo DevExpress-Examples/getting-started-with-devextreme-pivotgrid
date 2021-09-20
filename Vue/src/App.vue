@@ -1,6 +1,6 @@
 <template>
     <DxPivotGrid
-        id="pivot-grid"
+        id="pivotGrid"
         :data-source="dataSource"
         :allow-sorting="true"
         :allow-sorting-by-summary="true"
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style>
-#pivot-grid {
+#pivotGrid {
     height: 70vh;
 }
 </style>
