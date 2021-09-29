@@ -1,6 +1,5 @@
 $(function () {
     $("#pivotGrid").dxPivotGrid({
-        // Bind to Data
         dataSource: {
             store: {
                 type: "xmla",
@@ -26,9 +25,7 @@ $(function () {
             }, {
                 dataField: "[Ship Date].[Month of Year]",
                 area: "column"
-            },
-            // Configure Summaries
-            {
+            }, {
                 dataField: "[Measures].[Sales Amount]",
                 area: "data",
                 format: "currency"
@@ -39,22 +36,16 @@ $(function () {
             }],
             retrieveFields: false
         },
-        // Sort Data - By Field Values
         allowSorting: true,
-        // Sort Data - By Summary Values
         allowSortingBySummary: true,
-        // Filter Data
         allowFiltering: true,
-        // Display the Field Panel
         fieldPanel: {
             visible: true,
             showFilterFields: false
         },
-        // Configure the Field Chooser
         // fieldChooser: {
-        //     enabled: true
+        //     Configuration options go here
         // },
-        // Export to Excel
         export: {
             enabled: true
         },

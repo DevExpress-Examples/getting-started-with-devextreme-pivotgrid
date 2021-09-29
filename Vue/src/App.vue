@@ -5,12 +5,14 @@
         :allow-sorting="true"
         :allow-sorting-by-summary="true"
         :allow-filtering="true"
-        @exporting="onExporting">
+        @exporting="exportGrid">
         <DxFieldPanel
             :visible="true"
             :show-filter-fields="false"
         />
-        <!-- <DxFieldChooser :enabled="true" /> -->
+        <!-- <DxFieldChooser
+            Configuration options go here
+        /> -->
         <DxExport :enabled="true" />
     </DxPivotGrid>
 </template>
@@ -44,7 +46,7 @@ export default {
       }
   },
   methods: {
-      onExporting (e) {
+      exportGrid (e) {
         const workbook = new Workbook();
         const worksheet = workbook.addWorksheet('Sales');
         

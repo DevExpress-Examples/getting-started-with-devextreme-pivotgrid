@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(service: AdventureWorksService) {
     this.dataSource = service.getPivotGridDataSource();
   }
-  onExporting (e) {
+  exportGrid(e) {
     const workbook = new Workbook();
     const worksheet = workbook.addWorksheet('Sales');
     

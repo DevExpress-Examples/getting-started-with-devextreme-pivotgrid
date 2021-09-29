@@ -15,7 +15,7 @@ import { Workbook } from 'exceljs';
 import saveAs from 'file-saver';
 
 const dataSource = AdventureWorksService.getPivotGridDataSource();
-const onExporting = (e) => {
+const exportGrid = (e) => {
     const workbook = new Workbook();
     const worksheet = workbook.addWorksheet('Sales');
 
@@ -38,14 +38,14 @@ function App() {
         allowSorting={true}
         allowSortingBySummary={true}
         allowFiltering={true}
-        onExporting={onExporting}>
+        onExporting={exportGrid}>
         <FieldPanel
             visible={true}
             showFilterFields={false}
         />
         {/* 
         <FieldChooser
-            enabled={true}
+            Configuration options go here
         />
         */}
         <Export enabled={true} />

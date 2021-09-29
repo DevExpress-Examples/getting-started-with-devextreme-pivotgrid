@@ -4,14 +4,14 @@
     [allowSorting]="true"
     [allowSortingBySummary]="true"
     [allowFiltering]="true"
-    (onExporting)="onExporting($event)">
+    (onExporting)="exportGrid($event)">
     <dxo-field-panel
         [visible]="true"
         [showFilterFields]="false">
     </dxo-field-panel>
     <!-- <dxo-field-chooser
-        [enabled]="true">
-    </dxo-field-chooser> -->
+        Configuration options go here
+    ></dxo-field-chooser> -->
     <dxo-export
         [enabled]="true">
     </dxo-export>
