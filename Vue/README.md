@@ -1,5 +1,7 @@
 # Getting Started with DevExtreme Vue PivotGrid
 
+This repository stores the source code for the [Getting Started with PivotGrid](https://js.devexpress.com/Documentation/Guide/UI_Components/PivotGrid/Getting_Started_with_PivotGrid/) tutorial.
+
 This project was bootstrapped with [Vue CLI](https://cli.vuejs.org/).
 
 ## Project setup

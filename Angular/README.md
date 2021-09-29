@@ -1,5 +1,7 @@
 # Getting Started with DevExtreme Angular PivotGrid
 
+This repository stores the source code for the [Getting Started with PivotGrid](https://js.devexpress.com/Documentation/Guide/UI_Components/PivotGrid/Getting_Started_with_PivotGrid/) tutorial.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
 ## Development server

@@ -1,5 +1,7 @@
 # Getting Started with DevExtreme jQuery PivotGrid
 
+This repository stores the source code for the [Getting Started with PivotGrid](https://js.devexpress.com/Documentation/Guide/UI_Components/PivotGrid/Getting_Started_with_PivotGrid/) tutorial.
+
 ## Installation
 
 Download the example and use NPM to install required libraries.
