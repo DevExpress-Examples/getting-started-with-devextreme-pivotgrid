@@ -5,7 +5,7 @@ import './App.css';
 import {
     PivotGrid,
     FieldPanel,
-    // FieldChooser,
+    FieldChooser,
     Export
 } from 'devextreme-react/pivot-grid';
 
@@ -42,12 +42,10 @@ function App() {
         <FieldPanel
             visible={true}
             showFilterFields={false}
-        />
-        {/* 
+        /> 
         <FieldChooser
-            Configuration options go here
+            allowSearch={true}
         />
-        */}
         <Export enabled={true} />
       </PivotGrid>
   );

@@ -20,7 +20,6 @@ $(function () {
             }, {
                 dataField: "[Ship Date].[Calendar Year]",
                 area: "column",
-                // Filter Data
                 filterValues: [["CY 2003"], ["CY 2004"]]
             }, {
                 dataField: "[Ship Date].[Month of Year]",
@@ -33,8 +32,7 @@ $(function () {
                 dataField: "[Measures].[Tax Amount]",
                 area: "data",
                 format: "currency"
-            }],
-            retrieveFields: false
+            }]
         },
         allowSorting: true,
         allowSortingBySummary: true,
@@ -43,9 +41,9 @@ $(function () {
             visible: true,
             showFilterFields: false
         },
-        // fieldChooser: {
-        //     Configuration options go here
-        // },
+        fieldChooser: {
+            allowSearch: true
+        },
         export: {
             enabled: true
         },

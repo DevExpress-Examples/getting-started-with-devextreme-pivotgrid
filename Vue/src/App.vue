@@ -10,9 +10,7 @@
             :visible="true"
             :show-filter-fields="false"
         />
-        <!-- <DxFieldChooser
-            Configuration options go here
-        /> -->
+        <DxFieldChooser :allow-search="true" />
         <DxExport :enabled="true" />
     </DxPivotGrid>
 </template>
@@ -24,7 +22,7 @@ import 'devextreme/dist/css/dx.light.css'
 import {
     DxPivotGrid,
     DxFieldPanel,
-    // DxFieldChooser,
+    DxFieldChooser,
     DxExport
 } from 'devextreme-vue/pivot-grid';
 import AdventureWorksService from './adventureworks.service';
@@ -37,7 +35,7 @@ export default {
   components: {
     DxPivotGrid,
     DxFieldPanel,
-    // DxFieldChooser,
+    DxFieldChooser,
     DxExport
   },
   data() {
