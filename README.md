@@ -5,4 +5,4 @@
 <!-- default badges end -->
 # Getting Started with DevExtreme PivotGrid
 
-This repository stores the source code for the [Getting Started with PivotGrid](https://js.devexpress.com/Documentation/Guide/UI_Components/PivotGrid/Getting_Started_with_PivotGrid/) tutorial.
+This repository stores the source code for the [Getting Started with PivotGrid](https://js.devexpress.com/Documentation/Guide/UI_Components/PivotGrid/Getting_Started_with_PivotGrid/) tutorial. 
