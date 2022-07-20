@@ -4,8 +4,5 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Getting Started with DevExtreme PivotGrid
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/406031826/)**
-<!-- run online end -->
 
 This repository stores the source code for the [Getting Started with PivotGrid](https://js.devexpress.com/Documentation/Guide/UI_Components/PivotGrid/Getting_Started_with_PivotGrid/) tutorial. 
