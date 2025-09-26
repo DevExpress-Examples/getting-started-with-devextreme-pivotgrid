@@ -8,7 +8,7 @@
 
 This repository stores the code examples of the PivotGrid component for the [Getting Started with PivotGrid](https://js.devexpress.com/Documentation/Guide/UI_Components/PivotGrid/Getting_Started_with_PivotGrid/) tutorial. This tutorial shows how to add the PivotGrid component to a page, bind the component to data, sort and filter data, and enable export to Excel.
 
-![PivotGrid](pivot-grid.png)
+![PivotGrid](images/pivot-grid.png)
 
 ## Files to Review
 
