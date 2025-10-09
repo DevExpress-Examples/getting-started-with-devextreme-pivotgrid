@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import HomeContent from '../components/HomeContent.vue';
+import PivotGridContent from '../components/PivotGridContent.vue';
 </script>
 
 <template>
-  <HomeContent text="Count"/>
+  <PivotGridContent/>
 </template>
 

@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
 
 import { mount } from '@vue/test-utils';
-import Content from '../HomeContent.vue';
+import Content from '../PivotGridContent.vue';
 
 describe('Content', () => {
   it('renders properly', () => {
-    const wrapper = mount(Content, { props: { text: 'count' } });
-    expect(wrapper.text()).toContain('count');
+    const wrapper = mount(Content);
+    expect(wrapper.text()).toContain('PivotGrid');
   });
 });

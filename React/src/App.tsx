@@ -1,17 +1,51 @@
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import './App.css';
 import 'devextreme/dist/css/dx.material.blue.light.compact.css';
-import Button from 'devextreme-react/button';
+import PivotGrid, {
+  FieldPanel,
+  FieldChooser,
+  Export,
+} from 'devextreme-react/pivot-grid';
+import type { PivotGridTypes } from 'devextreme-react/pivot-grid';
+import { exportPivotGrid } from 'devextreme/excel_exporter';
+import { Workbook } from 'exceljs';
+import { saveAs } from 'file-saver';
+import AdventureWorksService from './adventureworks.service';
+
+const dataSource = AdventureWorksService.getPivotGridDataSource();
 
 function App(): JSX.Element {
-  var [count, setCount] = useState<number>(0);
-  const clickHandler = useCallback(() => {
-    setCount((prev) => prev + 1);
-  }, [setCount]);
+  const exportGrid = useCallback((e: PivotGridTypes.ExportingEvent) => {
+    const workbook = new Workbook();
+    const worksheet = workbook.addWorksheet('Sales');
+
+    exportPivotGrid({
+      component: e.component,
+      worksheet,
+    }).then(() => workbook.xlsx.writeBuffer().then((buffer) => {
+      saveAs(new Blob([buffer], { type: 'application/octet-stream' }), 'Sales.xlsx');
+      return buffer;
+    })).catch(() => undefined);
+    e.cancel = true;
+  }, []);
+
   return (
-    <div className="main">
-      <Button text={`Click count: ${count}`} onClick={clickHandler} />
-    </div>
+    <PivotGrid
+      id="pivot-grid"
+      dataSource={dataSource}
+      allowSorting={true}
+      allowSortingBySummary={true}
+      allowFiltering={true}
+      onExporting={exportGrid}>
+      <FieldPanel
+        visible={true}
+        showFilterFields={false}
+      />
+      <FieldChooser
+        allowSearch={true}
+      />
+      <Export enabled={true} />
+    </PivotGrid>
   );
 }
 

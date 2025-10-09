@@ -1,20 +1,27 @@
 import { Component } from '@angular/core';
-import { ClickEvent } from 'devextreme/ui/button';
+import { AdventureWorksService } from './adventureworks.service';
+import type { PivotGridDataSource } from './app.types';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  providers: [AdventureWorksService],
 })
 export class AppComponent {
-  title = 'Angular';
+  title = 'Getting Started with DevExtreme Angular PivotGrid';
 
-  counter = 0;
+  dataSource: PivotGridDataSource;
 
-  buttonText = 'Click count: 0';
+  constructor(service: AdventureWorksService) {
+    this.dataSource = service.getPivotGridDataSource();
+  }
 
-  onClick(e: ClickEvent): void {
-    this.counter++;
-    this.buttonText = `Click count: ${this.counter}`;
+  exportGrid(e: any): void {
+    // Export functionality can be implemented here
+    // For this example, we'll just prevent the default export
+    e.cancel = true;
+    // eslint-disable-next-line no-console
+    console.log('Export functionality can be implemented using DevExtreme export capabilities');
   }
 }

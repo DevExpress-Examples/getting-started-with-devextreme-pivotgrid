@@ -18,9 +18,10 @@ This repository stores the code examples of the PivotGrid component for the [Get
 - **jQuery**
     - [index.js](jQuery/src/index.js)
 - **React**
-    - [App.js](React/src/App.js)
+    - [App.tsx](React/src/App.tsx)
 - **Vue**
     - [App.vue](Vue/src/App.vue)
+    - [PivotGridContent.vue](Vue/src/components/PivotGridContent.vue)
 
 ## Documentation
 
