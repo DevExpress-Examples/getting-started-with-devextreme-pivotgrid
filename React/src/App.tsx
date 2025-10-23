@@ -8,7 +8,7 @@ import PivotGrid, {
 } from 'devextreme-react/pivot-grid';
 import type { PivotGridTypes } from 'devextreme-react/pivot-grid';
 import { exportPivotGrid } from 'devextreme/excel_exporter';
-import { Workbook } from 'exceljs';
+import { Workbook } from 'devextreme-exceljs-fork';
 import { saveAs } from 'file-saver';
 import AdventureWorksService from './adventureworks.service';
 
@@ -22,9 +22,8 @@ function App(): JSX.Element {
     exportPivotGrid({
       component: e.component,
       worksheet,
-    }).then(() => workbook.xlsx.writeBuffer().then((buffer) => {
+    }).then(() => workbook.xlsx.writeBuffer().then((buffer: ArrayBuffer) => {
       saveAs(new Blob([buffer], { type: 'application/octet-stream' }), 'Sales.xlsx');
-      return buffer;
     })).catch(() => undefined);
     e.cancel = true;
   }, []);

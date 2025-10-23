@@ -21,7 +21,9 @@
               "devextreme-quill",
               "jszip",
               "devexpress-diagram",
-              "devexpress-gantt"
+              "devexpress-gantt",
+              "file-saver",
+              "devextreme-exceljs-fork"
             ],
             "outputPath": "dist/Angular",
             "index": "src/index.html",

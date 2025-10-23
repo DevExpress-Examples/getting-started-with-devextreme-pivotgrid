@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { exportPivotGrid } from 'devextreme/excel_exporter';
+import { Workbook } from 'devextreme-exceljs-fork';
+import { saveAs } from 'file-saver';
 import { AdventureWorksService } from './adventureworks.service';
 import type { PivotGridDataSource } from './app.types';
 
@@ -18,10 +21,15 @@ export class AppComponent {
   }
 
   exportGrid(e: any): void {
-    // Export functionality can be implemented here
-    // For this example, we'll just prevent the default export
+    const workbook = new Workbook();
+    const worksheet = workbook.addWorksheet('Sales');
+
+    exportPivotGrid({
+      component: e.component,
+      worksheet,
+    }).then(() => workbook.xlsx.writeBuffer().then((buffer: ArrayBuffer) => {
+      saveAs(new Blob([buffer], { type: 'application/octet-stream' }), 'Sales.xlsx');
+    })).catch(() => undefined);
     e.cancel = true;
-    // eslint-disable-next-line no-console
-    console.log('Export functionality can be implemented using DevExtreme export capabilities');
   }
 }

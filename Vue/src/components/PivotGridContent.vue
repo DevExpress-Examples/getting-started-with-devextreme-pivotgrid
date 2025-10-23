@@ -8,7 +8,7 @@ import {
 import type { DxPivotGridTypes } from 'devextreme-vue/pivot-grid';
 import AdventureWorksService from '../adventureworks.service';
 import { exportPivotGrid } from 'devextreme/excel_exporter';
-import { Workbook } from 'exceljs';
+import { Workbook } from 'devextreme-exceljs-fork';
 import { saveAs } from 'file-saver';
 
 const dataSource = AdventureWorksService.getPivotGridDataSource() as any;
