@@ -29,7 +29,7 @@ This repository stores the code examples of the PivotGrid component for the [Get
 
 - [PivotGrid - API Reference](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxPivotGrid/)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=getting-started-with-devextreme-pivotgrid&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=getting-started-with-devextreme-pivotgrid&~~~was_helpful=no)
 
