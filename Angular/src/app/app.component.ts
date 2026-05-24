@@ -6,10 +6,11 @@ import { AdventureWorksService } from './adventureworks.service';
 import type { PivotGridDataSource } from './app.types';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [AdventureWorksService],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    providers: [AdventureWorksService],
+    standalone: false
 })
 export class AppComponent {
   title = 'Getting Started with DevExtreme Angular PivotGrid';
