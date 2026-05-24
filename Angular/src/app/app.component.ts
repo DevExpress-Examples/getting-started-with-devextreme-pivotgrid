@@ -5,12 +5,14 @@ import { saveAs } from 'file-saver';
 import { AdventureWorksService } from './adventureworks.service';
 import type { PivotGridDataSource } from './app.types';
 
+import { DxPivotGridModule } from 'devextreme-angular/ui/pivot-grid';
+
 @Component({
     selector: 'app-root',
+    imports: [DxPivotGridModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     providers: [AdventureWorksService],
-    standalone: false
 })
 export class AppComponent {
   title = 'Getting Started with DevExtreme Angular PivotGrid';
