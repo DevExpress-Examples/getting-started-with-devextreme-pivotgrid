@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { exportPivotGrid } from 'devextreme/excel_exporter';
 import { Workbook } from 'devextreme-exceljs-fork';
 import { saveAs } from 'file-saver';
@@ -12,6 +12,7 @@ import { DxPivotGridModule } from 'devextreme-angular/ui/pivot-grid';
     imports: [DxPivotGridModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [AdventureWorksService],
 })
 export class AppComponent {
